@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.9'
 
 services:
 
@@ -7,7 +7,11 @@ services:
         container_name: kavita
         volumes:
             - ./manga:/manga
-            - ./config:/kavita/config
+            - ./comics:/comics
+            - ./books:/books
+            - ./data:/kavita/config
+        environment:
+            - TZ=Europe/Madrid            
         ports:
             - "8200:5000"
         restart: unless-stopped
