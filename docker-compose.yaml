@@ -7,10 +7,10 @@ services:
         container_name: kavita
         privileged: true
         volumes:
-            - ./manga:/manga:rw
-            - ./comics:/comics:rw
-            - ./epub:/epub:rw
-            - ./data:/kavita/config:rw
+            - ./manga:/manga
+            - ./comics:/comics
+            - ./books:/books
+            - ./data:/kavita/config
         environment:
             - TZ=Europe/Madrid            
         ports:
