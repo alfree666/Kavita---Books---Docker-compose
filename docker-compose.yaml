@@ -1,15 +1,14 @@
-version: '3.9'
+version: '3.3'
 
 services:
 
     kavita:
         image: kizaing/kavita:latest
         container_name: kavita
+        privileged: true
         volumes:
-            - ./manga:/manga
-            - ./comics:/comics
-            - ./books:/books
-            - ./data:/kavita/config
+            - ./manga:/manga:rw
+            - ./data:/kavita/config:rw
         environment:
             - TZ=Europe/Madrid            
         ports:
