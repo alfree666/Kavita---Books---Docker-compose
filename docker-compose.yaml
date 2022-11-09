@@ -8,6 +8,8 @@ services:
         privileged: true
         volumes:
             - ./manga:/manga:rw
+            - ./comics:/comics:rw
+            - ./epub:/epub:rw
             - ./data:/kavita/config:rw
         environment:
             - TZ=Europe/Madrid            
